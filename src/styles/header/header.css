@@ -170,13 +170,15 @@
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(212, 175, 55, 0.25);
     max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    transition: max-height 0.35s ease-in-out, padding 0.3s ease;
+    transition: max-height 0.35s ease-in-out, padding 0.3s ease, opacity 0.3s ease;
     padding: 0 24px;
   }
 
   .header-nav.open {
-    max-height: 380px;
+    max-height: 500px;
+    opacity: 1;
     padding: 16px 24px 24px 24px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
   }

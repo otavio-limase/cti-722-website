@@ -37,6 +37,19 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13.5px;
+  }
 }
 
 body {

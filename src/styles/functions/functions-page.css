@@ -157,3 +157,14 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .functions-filter-tabs {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 16px;
+  }
+  .filter-tab-btn {
+    width: 100%;
+  }
+}

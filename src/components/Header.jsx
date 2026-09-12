@@ -1,16 +1,30 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import '../styles/header/header.css';
 import logo from '../assets/Header/logo-itabira.png';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef(null);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <div className="header-container">
         <Link to="/" className="header-logo-link" onClick={closeMenu}>
           <img src={logo} alt="Capítulo Templários de Itabira nº 722" className="header-logo" />
