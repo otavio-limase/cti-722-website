@@ -52,7 +52,7 @@ const Contact = () => {
         <div className="contact-badge">Fale Conosco</div>
         <h1 className="contact-title">Entre em Contato & Seja um DeMolay</h1>
         <p className="contact-subtitle">
-          Tem interesse em ingressar no Capítulo Templários de Itabira nº 722 ou quer saber mais sobre nossos
+          Tem interesse em ingressar no Capítulo Templários de Itabira Nº 722 ou quer saber mais sobre nossos
           projetos comunitários e filantrópicos em Itabira? Estamos prontos para recebê-lo!
         </p>
       </header>

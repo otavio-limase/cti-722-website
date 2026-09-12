@@ -27,10 +27,10 @@ const Header = () => {
     <header className="header" ref={headerRef}>
       <div className="header-container">
         <Link to="/" className="header-logo-link" onClick={closeMenu}>
-          <img src={logo} alt="Capítulo Templários de Itabira nº 722" className="header-logo" />
+          <img src={logo} alt="Capítulo Templários de Itabira Nº 722" className="header-logo" />
           <div className="header-title-block">
             <span className="header-org">Ordem DeMolay</span>
-            <span className="header-chapter">Cap. Templários de Itabira nº 722</span>
+            <span className="header-chapter">Cap. Templários de Itabira Nº 722</span>
           </div>
         </Link>
 
