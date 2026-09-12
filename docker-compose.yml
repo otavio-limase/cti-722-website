@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cti-722-website
+    ports:
+      - "8080:80" # Mapeia a porta 8080 da sua máquina para a porta 80 do container
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+

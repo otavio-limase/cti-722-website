@@ -1,0 +1,227 @@
+.card-wrapper {
+  width: 100%;
+  max-width: 320px;
+  height: 280px;
+  cursor: pointer;
+  perspective: 1000px;
+  border-radius: var(--radius-lg);
+  outline: none;
+}
+
+.card-wrapper:focus-visible .card {
+  box-shadow: 0 0 0 3px var(--accent-gold);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+  border-radius: var(--radius-lg);
+}
+
+.card-wrapper:hover .card,
+.card-wrapper:focus .card {
+  transform: rotateY(180deg);
+}
+
+/* Frente e Verso */
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+/* --- Frente do Card --- */
+.card-front {
+  background: linear-gradient(145deg, #18283f, #0f1c2d);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 24px 20px;
+  transform: rotateY(0deg);
+  transition: border-color 0.3s ease;
+}
+
+.card-wrapper:hover .card-front {
+  border-color: var(--border-gold);
+}
+
+.card-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: auto;
+  opacity: 0.18;
+  pointer-events: none;
+  filter: grayscale(20%);
+}
+
+.card-front-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.card-period-badge {
+  background: rgba(212, 175, 55, 0.18);
+  border: 1px solid var(--border-gold);
+  color: var(--accent-gold-light);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 14px;
+  letter-spacing: 1px;
+}
+
+.card-leader-name {
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  margin: 4px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-role-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.card-meta {
+  margin-top: 8px;
+}
+
+.card-initiates-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.meta-icon {
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+}
+
+/* --- Verso do Card --- */
+.card-back {
+  transform: rotateY(180deg);
+  background: #111d2e;
+  border-color: var(--border-gold);
+}
+
+/* Quando há foto */
+.card-back-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-back-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 16px 16px 16px;
+  background: linear-gradient(to top, rgba(11, 19, 32, 0.95) 0%, rgba(11, 19, 32, 0.6) 70%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+
+.card-back-name {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.card-back-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.inline-icon {
+  font-size: 0.75rem;
+}
+
+/* Fallback quando NÃO há foto */
+.card-back-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #1b2e47, #0e1a29);
+  gap: 8px;
+  position: relative;
+}
+
+.card-fallback-crest {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  opacity: 0.12;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-fallback-icon {
+  font-size: 2.5rem;
+  color: var(--accent-gold);
+  margin-bottom: 6px;
+}
+
+.card-period-tag {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
