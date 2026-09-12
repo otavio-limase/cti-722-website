@@ -1,3 +1,7 @@
+/* ===================================================
+   PERIOD DETAILS — Forest Green leader banner, white members
+   =================================================== */
+
 .period-details-page {
   width: 100%;
   display: flex;
@@ -14,7 +18,7 @@
   gap: 28px;
 }
 
-/* Barra Superior */
+/* --- Top Bar --- */
 .details-top-bar {
   display: flex;
   justify-content: space-between;
@@ -26,44 +30,42 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--accent-gold);
+  color: var(--clr-burgundy);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   padding: 8px 16px;
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-color);
+  background: var(--clr-burgundy-light);
+  border: 1px solid rgba(116, 19, 21, 0.2);
   transition: var(--transition);
 }
 
 .back-link:hover {
-  background: rgba(212, 175, 55, 0.15);
-  color: var(--accent-gold-light);
+  background: rgba(116, 19, 21, 0.14);
+  color: var(--clr-burgundy-hover);
   transform: translateX(-3px);
 }
 
-.back-icon {
-  font-size: 0.85rem;
-}
+.back-icon { font-size: 0.85rem; }
 
 .period-id-tag {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.04);
-  padding: 4px 10px;
+  font-size: 0.78rem;
+  color: var(--clr-grey);
+  background: var(--clr-grey-light);
+  padding: 4px 12px;
   border-radius: 12px;
+  border: 1px solid var(--clr-grey-border);
 }
 
-/* Banner do Líder */
+/* --- Leader Banner (Forest Green block) --- */
 .leader-banner {
-  background: linear-gradient(145deg, #18283f, #0f1c2d);
-  border: 1px solid var(--border-gold);
+  background: var(--clr-green);
   border-radius: var(--radius-xl);
-  padding: 36px 32px;
+  padding: 40px 36px;
   display: flex;
   align-items: center;
   gap: 32px;
-  box-shadow: var(--shadow-gold);
+  box-shadow: var(--shadow-lg);
 }
 
 .leader-avatar-wrapper {
@@ -71,10 +73,10 @@
   height: 130px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid var(--accent-gold);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+  border: 3px solid var(--clr-gold);
+  box-shadow: 0 0 20px rgba(216, 178, 87, 0.3);
   flex-shrink: 0;
-  background: #111d2e;
+  background: var(--clr-green-hover);
 }
 
 .leader-avatar-img {
@@ -92,19 +94,19 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background: linear-gradient(135deg, #1b2f4a, #0e1a29);
+  background: var(--clr-green-hover);
 }
 
 .fallback-logo {
   position: absolute;
   width: 70px;
   height: auto;
-  opacity: 0.2;
+  opacity: 0.18;
 }
 
 .fallback-role-icon {
   font-size: 2.2rem;
-  color: var(--accent-gold);
+  color: var(--clr-gold);
   position: relative;
   z-index: 1;
 }
@@ -120,11 +122,11 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(212, 175, 55, 0.15);
-  border: 1px solid var(--border-gold);
-  color: var(--accent-gold-light);
+  background: rgba(216, 178, 87, 0.18);
+  border: 1px solid var(--clr-gold);
+  color: var(--clr-gold);
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   padding: 4px 12px;
   border-radius: 14px;
@@ -135,7 +137,7 @@
   font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--clr-white);
   line-height: 1.2;
 }
 
@@ -143,22 +145,22 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.92rem;
-  color: #93c5fd;
+  font-size: 0.9rem;
+  color: var(--clr-blue);
   font-weight: 600;
 }
 
 .leader-description {
   font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.65;
+  margin-top: 4px;
 }
 
-/* Seção de Membros Iniciados */
+/* --- Members Section --- */
 .members-section {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: var(--clr-white);
+  border: 1px solid var(--clr-grey-border);
   border-radius: var(--radius-xl);
   padding: 32px 28px;
   display: flex;
@@ -174,7 +176,7 @@
   flex-wrap: wrap;
   gap: 16px;
   padding-bottom: 16px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--clr-grey-border);
 }
 
 .members-title-group {
@@ -187,7 +189,7 @@
 .members-section-title {
   font-family: var(--font-heading);
   font-size: 1.4rem;
-  color: #ffffff;
+  color: var(--clr-dark);
   margin: 0;
 }
 
@@ -195,9 +197,9 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(37, 99, 235, 0.2);
-  border: 1px solid rgba(37, 99, 235, 0.35);
-  color: #93c5fd;
+  background: var(--clr-burgundy-light);
+  border: 1px solid rgba(116, 19, 21, 0.2);
+  color: var(--clr-burgundy);
   font-size: 0.82rem;
   font-weight: 600;
   padding: 4px 12px;
@@ -212,10 +214,10 @@
 
 .member-search-input {
   padding: 8px 14px 8px 36px;
-  background: rgba(13, 27, 42, 0.7);
-  border: 1px solid var(--border-color);
+  background: var(--clr-grey-light);
+  border: 1px solid var(--clr-grey-border);
   border-radius: var(--radius-md);
-  color: #ffffff;
+  color: var(--clr-dark);
   font-size: 0.88rem;
   font-family: var(--font-main);
   width: 200px;
@@ -223,22 +225,24 @@
 }
 
 .member-search-input:focus {
-  border-color: var(--accent-gold);
+  border-color: var(--clr-burgundy);
   width: 240px;
+  background: var(--clr-white);
   outline: none;
+  box-shadow: 0 0 0 3px rgba(116, 19, 21, 0.07);
 }
 
 .members-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 14px;
+  gap: 12px;
 }
 
 .member-card {
-  background: rgba(13, 27, 42, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--clr-grey-light);
+  border: 1px solid var(--clr-grey-border);
   border-radius: var(--radius-md);
-  padding: 14px 16px;
+  padding: 13px 16px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -246,15 +250,16 @@
 }
 
 .member-card:hover {
-  border-color: var(--border-gold);
-  background: rgba(21, 38, 59, 0.8);
+  border-color: var(--clr-gold);
+  background: var(--clr-white);
   transform: translateX(3px);
+  box-shadow: var(--shadow-sm);
 }
 
 .member-number {
   font-family: var(--font-heading);
-  font-size: 0.85rem;
-  color: var(--accent-gold);
+  font-size: 0.82rem;
+  color: var(--clr-burgundy);
   font-weight: 700;
   width: 28px;
   flex-shrink: 0;
@@ -268,14 +273,14 @@
 }
 
 .member-check-icon {
-  color: #10b981;
+  color: var(--clr-green);
   font-size: 0.85rem;
   flex-shrink: 0;
 }
 
 .member-name {
-  font-size: 0.92rem;
-  color: #f1f5f9;
+  font-size: 0.9rem;
+  color: var(--clr-dark);
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
@@ -285,18 +290,16 @@
 .no-initiates-box {
   padding: 32px 16px;
   text-align: center;
-  color: var(--text-muted);
+  color: var(--clr-grey);
   font-style: italic;
 }
 
-/* Estado de Erro / Não encontrado */
-.not-found-state {
-  padding: 40px 0;
-}
+/* --- Error / Not Found --- */
+.not-found-state { padding: 40px 0; }
 
 .error-box {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: var(--clr-white);
+  border: 1px solid var(--clr-grey-border);
   border-radius: var(--radius-xl);
   padding: 48px;
   text-align: center;
@@ -313,24 +316,14 @@
     padding: 28px 20px;
   }
 
-  .leader-info-content {
-    align-items: center;
-  }
-
-  .leader-name {
-    font-size: 1.6rem;
-  }
+  .leader-info-content { align-items: center; }
+  .leader-name { font-size: 1.6rem; }
 
   .members-header {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .member-search-input {
-    width: 100%;
-  }
-
-  .members-grid {
-    grid-template-columns: 1fr;
-  }
+  .member-search-input { width: 100%; }
+  .members-grid { grid-template-columns: 1fr; }
 }

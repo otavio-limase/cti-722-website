@@ -1,6 +1,10 @@
+/* ===================================================
+   FUNCTION CARD — White surface, burgundy headings
+   =================================================== */
+
 .function-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: var(--clr-white);
+  border: 1px solid var(--clr-grey-border);
   border-radius: var(--radius-xl);
   padding: 32px 28px;
   display: flex;
@@ -11,21 +15,22 @@
 }
 
 .function-card:hover {
-  border-color: var(--border-gold);
+  border-color: var(--clr-gold);
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
 }
 
 .card-light {
-  background: linear-gradient(145deg, #1b2f4a, #132235);
-  border-color: rgba(37, 99, 235, 0.25);
+  background: var(--clr-white);
+  border-left: 4px solid var(--clr-burgundy);
 }
 
 .card-dark {
-  background: linear-gradient(145deg, #162438, #0f1a28);
+  background: var(--clr-grey-light);
+  border-left: 4px solid var(--clr-gold);
 }
 
-/* Header do Card */
+/* --- Card Header --- */
 .function-card-header {
   display: flex;
   align-items: flex-start;
@@ -35,8 +40,8 @@
 .function-icon-wrapper {
   width: 54px;
   height: 54px;
-  background: rgba(212, 175, 55, 0.12);
-  border: 1px solid var(--border-gold);
+  background: var(--clr-gold-light);
+  border: 1px solid var(--clr-gold);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -45,7 +50,7 @@
 }
 
 .function-main-icon {
-  color: var(--accent-gold);
+  color: var(--clr-gold-hover);
   font-size: 1.6rem;
 }
 
@@ -62,20 +67,20 @@
 }
 
 .function-category-tag {
-  font-size: 0.75rem;
-  color: #93c5fd;
-  background: rgba(37, 99, 235, 0.2);
+  font-size: 0.72rem;
+  color: var(--clr-burgundy);
+  background: var(--clr-burgundy-light);
   padding: 3px 10px;
   border-radius: 12px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
 
 .function-badge-tag {
-  font-size: 0.75rem;
-  color: var(--accent-gold-light);
-  background: rgba(212, 175, 55, 0.15);
+  font-size: 0.72rem;
+  color: var(--clr-gold-hover);
+  background: var(--clr-gold-light);
   padding: 3px 10px;
   border-radius: 12px;
   font-weight: 600;
@@ -83,13 +88,13 @@
 
 .function-title {
   font-family: var(--font-heading);
-  font-size: 1.45rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--clr-dark);
   margin: 0;
 }
 
-/* Corpo do Card */
+/* --- Card Body --- */
 .function-card-body {
   display: flex;
   flex-direction: column;
@@ -97,23 +102,23 @@
 }
 
 .function-summary {
-  font-size: 0.98rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
+  font-size: 0.96rem;
+  color: var(--clr-grey);
+  line-height: 1.7;
 }
 
-/* Lista de Atribuições */
+/* Responsibilities block */
 .function-responsibilities-block {
-  background: rgba(13, 27, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--clr-grey-light);
+  border: 1px solid var(--clr-grey-border);
   border-radius: var(--radius-md);
   padding: 18px 20px;
 }
 
 .function-section-subtitle {
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--clr-dark);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 12px;
@@ -131,30 +136,30 @@
   align-items: flex-start;
   gap: 10px;
   font-size: 0.92rem;
-  color: var(--text-secondary);
+  color: var(--clr-grey);
   line-height: 1.5;
 }
 
 .bullet-icon {
-  color: #10b981;
-  font-size: 0.95rem;
+  color: var(--clr-green);
+  font-size: 0.9rem;
   margin-top: 3px;
   flex-shrink: 0;
 }
 
-/* Caixa de Simbolismo */
+/* Symbolism box */
 .function-symbolism-box {
-  background: rgba(212, 175, 55, 0.08);
-  border-left: 3px solid var(--accent-gold);
+  background: var(--clr-gold-light);
+  border-left: 3px solid var(--clr-gold);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   padding: 14px 18px;
 }
 
 .symbolism-label {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  color: var(--accent-gold-light);
+  color: var(--clr-gold-hover);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 4px;
@@ -162,7 +167,7 @@
 
 .symbolism-text {
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--clr-grey);
   font-style: italic;
-  line-height: 1.5;
+  line-height: 1.55;
 }

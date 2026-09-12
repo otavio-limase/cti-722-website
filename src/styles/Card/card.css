@@ -1,3 +1,7 @@
+/* ===================================================
+   FLIP CARD — White front, Burgundy-accented back
+   =================================================== */
+
 .card-wrapper {
   width: 100%;
   max-width: 320px;
@@ -9,7 +13,7 @@
 }
 
 .card-wrapper:focus-visible .card {
-  box-shadow: 0 0 0 3px var(--accent-gold);
+  box-shadow: 0 0 0 3px var(--clr-gold);
 }
 
 .card {
@@ -26,7 +30,7 @@
   transform: rotateY(180deg);
 }
 
-/* Frente e Verso */
+/* --- Front & Back base --- */
 .card-front,
 .card-back {
   width: 100%;
@@ -39,12 +43,12 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--clr-grey-border);
 }
 
-/* --- Frente do Card --- */
+/* --- Front --- */
 .card-front {
-  background: linear-gradient(145deg, #18283f, #0f1c2d);
+  background: var(--clr-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +60,7 @@
 }
 
 .card-wrapper:hover .card-front {
-  border-color: var(--border-gold);
+  border-color: var(--clr-gold);
 }
 
 .card-background {
@@ -66,9 +70,9 @@
   transform: translate(-50%, -50%);
   width: 65%;
   height: auto;
-  opacity: 0.18;
+  opacity: 0.05;
   pointer-events: none;
-  filter: grayscale(20%);
+  filter: grayscale(100%);
 }
 
 .card-front-content {
@@ -82,11 +86,11 @@
 }
 
 .card-period-badge {
-  background: rgba(212, 175, 55, 0.18);
-  border: 1px solid var(--border-gold);
-  color: var(--accent-gold-light);
+  background: var(--clr-gold-light);
+  border: 1px solid var(--clr-gold);
+  color: var(--clr-gold-hover);
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   padding: 4px 12px;
   border-radius: 14px;
@@ -95,10 +99,10 @@
 
 .card-leader-name {
   font-family: var(--font-heading);
-  font-size: 1.12rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: #ffffff;
-  line-height: 1.35;
+  color: var(--clr-dark);
+  line-height: 1.3;
   margin: 4px 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -108,41 +112,39 @@
 }
 
 .card-role-label {
-  font-size: 0.78rem;
-  color: var(--text-muted);
+  font-size: 0.75rem;
+  color: var(--clr-grey);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
 }
 
-.card-meta {
-  margin-top: 8px;
-}
+.card-meta { margin-top: 6px; }
 
 .card-initiates-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.78rem;
+  color: var(--clr-grey);
+  background: var(--clr-grey-light);
   padding: 4px 10px;
   border-radius: 12px;
 }
 
 .meta-icon {
-  color: var(--accent-gold);
-  font-size: 0.85rem;
+  color: var(--clr-burgundy);
+  font-size: 0.82rem;
 }
 
-/* --- Verso do Card --- */
+/* --- Back --- */
 .card-back {
   transform: rotateY(180deg);
-  background: #111d2e;
-  border-color: var(--border-gold);
+  background: var(--clr-green);
+  border-color: var(--clr-gold);
 }
 
-/* Quando há foto */
+/* With photo */
 .card-back-image-wrapper {
   position: relative;
   width: 100%;
@@ -161,8 +163,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px 16px 16px 16px;
-  background: linear-gradient(to top, rgba(11, 19, 32, 0.95) 0%, rgba(11, 19, 32, 0.6) 70%, transparent 100%);
+  padding: 20px 16px 16px;
+  background: linear-gradient(to top, rgba(116, 19, 21, 0.92) 0%, rgba(116, 19, 21, 0.5) 70%, transparent 100%);
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -170,7 +172,7 @@
 }
 
 .card-back-name {
-  color: #ffffff;
+  color: var(--clr-white);
   font-size: 0.95rem;
   font-weight: 700;
   line-height: 1.2;
@@ -182,15 +184,13 @@
   justify-content: center;
   gap: 6px;
   font-size: 0.82rem;
-  color: var(--accent-gold);
+  color: var(--clr-gold);
   font-weight: 600;
 }
 
-.inline-icon {
-  font-size: 0.75rem;
-}
+.inline-icon { font-size: 0.75rem; }
 
-/* Fallback quando NÃO há foto */
+/* Fallback (no photo) */
 .card-back-fallback {
   width: 100%;
   height: 100%;
@@ -200,7 +200,7 @@
   justify-content: center;
   padding: 24px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #1b2e47, #0e1a29);
+  background: var(--clr-green);
   gap: 8px;
   position: relative;
 }
@@ -217,11 +217,11 @@
 
 .card-fallback-icon {
   font-size: 2.5rem;
-  color: var(--accent-gold);
+  color: var(--clr-gold);
   margin-bottom: 6px;
 }
 
 .card-period-tag {
   font-size: 0.82rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.7);
 }
